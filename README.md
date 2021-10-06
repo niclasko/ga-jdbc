@@ -27,6 +27,12 @@ In your Java code provide the following information:
 * Connection string: jdbc:GA://?KEY_FILE_LOCATION=FULL_PATH_TO_KEY_FILE_FROM_ABOVE
 * User/Pass: not applicable, but provide anything, e.g. dummy/dummy
 
+Run from command line:
+
+```
+java -jar ./build/GA-jdbc.jar KEY_FILE_LOCATION=./path_to_key_file/key_file.json "select ga:city, ga:pageTitle, ga:dateHourMinute, ga:country, ga:sessions from 'your_google_view_id' where date between 10DaysAgo and today"
+```
+
 ### Code Example ###
 
 The following is an example of Python code using the ga-jdbc driver to query Google Analytics and create a Pandas data frame from the query results. The query below selects from a Google Analytics view (GA View). The "OAuth 2.0 Client ID" user from above needs to be given permission to read from the GA View in order for this to work. To give access to the "OAuth 2.0 Client ID" user, please follow the below steps:
