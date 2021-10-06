@@ -49,7 +49,7 @@ conn = jaydebeapi.connect("org.sebson.jdbc.GA.GADriver",
                            ["dummy", "dummypassword"],
                            "./path_to_ga_jdbc_driver/GA-jdbc.jar")
 
-google_analytics_view_id = "154354697"
+google_analytics_view_id = "your_google_view_id"
 
 query = f"select ga:city, ga:month, ga:year, ga:country, ga:latitude, ga:longitude,
         ga:sessions, ga:users, ga:newUsers from '{google_analytics_view_id}'
