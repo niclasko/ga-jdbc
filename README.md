@@ -15,7 +15,7 @@ Author: Niclas Kjäll-Ohlsson (niclasko@gmail.com)
 
 ### Setup ###
 
-In order to use the ga-jdbc driver a "OAuth 2.0 Client ID", with accompanying key file, needs to be created at https://console.cloud.google.com/apis/credentials?project=dev-mg. It needs to have permissions to access the Google Reporting API.
+In order to use the ga-jdbc driver a "OAuth 2.0 Client ID", with accompanying key file, needs to be created at https://console.cloud.google.com/apis/credentials?project=your-google-cloud-project. It needs to have permissions to access the Google Reporting API.
 
 For detailed steps on how to create a new "OAuth 2.0 Client ID", please follow the steps here: https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/installed-java. After creating the "OAuth 2.0 Client ID" you can download it from the list of "OAuth 2.0 Client ID's" and use it for the ga-jdbc driver.
 
