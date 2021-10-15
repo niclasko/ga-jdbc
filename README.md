@@ -57,11 +57,11 @@ conn = jaydebeapi.connect("org.sebson.jdbc.GA.GADriver",
 
 google_analytics_view_id = "your_google_view_id"
 
-query = f"select ga:city, ga:month, ga:year, ga:country, ga:latitude, ga:longitude,
+query = f"""select ga:city, ga:month, ga:year, ga:country, ga:latitude, ga:longitude,
         ga:sessions, ga:users, ga:newUsers from '{google_analytics_view_id}'
-        where date between 10DaysAgo and today"
+        where date between 10DaysAgo and today"""
 
-stmt = self.ga_conn.jconn.createStatement()
+stmt = conn.jconn.createStatement()
 rs = stmt.executeQuery(query)
 rsmd = rs.getMetaData()
 column_names = [rsmd.getColumnName(i+1) for i in range(rsmd.getColumnCount())]
@@ -70,5 +70,5 @@ while(rs.next()):
     records.append(
         [rs.getObject(i+1) for i in range(rsmd.getColumnCount())]
     )
-df = pd.DataFrame(records, columns=column_names))
+df = pd.DataFrame(records, columns=column_names)
 ```
